@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <table border>
+      <tr class="table-heading">
+        <th colspan="2">Expenses Manager</th>
+      </tr>
+      <tr>
+        <th>Item Name</th>
+        <th>Price</th>
+      </tr>
+      <% for(let i of expenses_list){%>
+      <tr class="items">
+        <td><%= i.itemName %></td>
+        <td><%= i.amount %></td>
+        <td><a href="/delete-item?id=<%= i._id %>">Delete</a></td>
+      </tr>
+      <%} %>
+
+      <tfoot class="footer">
+        <td>Total</td>
+        <td><%= total %></td>
+      </tfoot>
+    </table>
+
+    <form class="form" action="/create_list" method="post">
+      <input type="text" name="itemName" placeholder="Add item" required />
+      <input
+        type="number"
+        name="amount"
+        placeholder="Add your price"
+        required
+      />
+    </form>
+    <button class="add-btn" type="submit">Add to expense</button>
+  </body>
+</html>

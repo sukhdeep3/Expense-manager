@@ -47,7 +47,7 @@ app.get("/", function (req, res) {
 
     let sum = 0;
     for (let i = 0; i < Expense.length; i++) {
-      //console.log(Expense[i].amount);
+      // console.log(Expense[i].amount);
 
       sum = sum + parseInt(Expense[i].amount);
     }
@@ -62,7 +62,7 @@ app.get("/", function (req, res) {
 });
 
 app.post("/create_list", function (req, res) {
-  //   console.log(req.body);
+    // console.log('**********'.req);
   Expenses.create(req.body, function (err, data) {
     if (err) {
       console.log("error", err);
@@ -75,7 +75,7 @@ app.post("/create_list", function (req, res) {
 
 app.get("/delete-item", function (req, res) {
   let id = req.query.id;
-  //   console.log(id);
+    // console.log(id);
   Expenses.findByIdAndDelete(id, function (err) {
     if (err) {
       console.log("Error in deleting the item", err);

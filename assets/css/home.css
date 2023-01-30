@@ -1,5 +1,6 @@
 body {
-  background-color: midnightblue;
+  height: 100vh;
+  background-color: rgb(96, 96, 96);
   color: white;
   display: flex;
   flex-direction: column;
@@ -8,18 +9,30 @@ body {
 }
 table {
   border-collapse: collapse;
+  box-shadow: 5px 10px 10px 10px rgba(0, 0, 0, 0.137);
 }
 th,
 td {
-  padding: 10px 25px;
+  font-size: 1rem;
+  padding: 15px 30px;
   text-align: center;
 }
-tr:nth-child(even) {
-  background-color: darkgreen;
+td a {
+  text-decoration: none;
+  color: white;
 }
-.table-heading,
-.footer {
-  background-color: brown;
+/* tr:nth-child(even) {
+  background-color: rgb(52, 49, 49);
+}
+tr:nth-child(odd) {
+  background-color: rgb(35, 31, 12);
+} */
+
+.table-heading, #footer {
+background-color: rgb(58, 34, 4);}
+
+table{
+  background-color: black;
 }
 
 .form {
@@ -35,12 +48,17 @@ tr:nth-child(even) {
   border: none;
   border-bottom: 1px black solid;
   text-align: center;
+  padding: 10px 25px;
+}
+.form input:focus {
+  outline: none;
 }
 .add-btn {
   border: none;
   border-radius: 4px;
-  background-color: green;
+  background-color: rgb(1, 55, 1);
   color: white;
-  padding: 5px;
+  font-size: 1rem;
+  padding: 10px;
   margin: 5px;
 }

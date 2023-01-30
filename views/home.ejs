@@ -7,11 +7,11 @@
   <body>
     <table border>
       <tr class="table-heading">
-        <th colspan="2">Expenses Manager</th>
+        <th colspan="3">Expenses Manager</th>
       </tr>
       <tr>
         <th>Item Name</th>
-        <th>Price</th>
+        <th colspan="2">Price</th>
       </tr>
       <% for(let i of expenses_list){%>
       <tr class="items">
@@ -21,9 +21,9 @@
       </tr>
       <%} %>
 
-      <tfoot class="footer">
+      <tfoot id="footer">
         <td>Total</td>
-        <td><%= total %></td>
+        <td colspan="2"><%= total %></td>
       </tfoot>
     </table>
 
@@ -35,7 +35,7 @@
         placeholder="Add your price"
         required
       />
+      <button class="add-btn" type="submit">Add to expense</button>
     </form>
-    <button class="add-btn" type="submit">Add to expense</button>
   </body>
 </html>
